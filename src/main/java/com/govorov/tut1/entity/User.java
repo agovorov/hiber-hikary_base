@@ -1,14 +1,13 @@
 package com.govorov.tut1.entity;
 
 import javax.persistence.*;
-
-/**
- * @author Govorov Andrey
- */
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
 
 @Entity
 @Table(name = "USER")
-public class User {
+public class User extends Base {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -29,6 +28,12 @@ public class User {
     public String getLastname() {
         return lastname;
     }
+
+    @ElementCollection
+//    @OneToOne(cascade=CascadeTypejavax.persistence.CascadeTypeJPA enumDefines the set of cascadable operations that are propagated to the associated entity.
+//            See JavaDoc Reference Page....ALL) MyEntity field2;
+//    @OneToMany(fetch=FetchType.EAGER) List<MyEntity> field3;
+    private List<String> cars = new ArrayList<String>();
 
     public void setLastname(String lastname) {
         this.lastname = lastname;
@@ -74,5 +79,9 @@ public class User {
                 ", lastname='" + lastname + '\'' +
                 ", email='" + email + '\'' +
                 '}';
+    }
+
+    public List<Car> getCars() {
+        return cars;
     }
 }

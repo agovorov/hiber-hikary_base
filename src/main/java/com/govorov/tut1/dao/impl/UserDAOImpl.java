@@ -12,15 +12,11 @@ import java.util.List;
 /**
  * @author Govorov Andrey
  */
-public class UserDAOImpl implements UserDAO {
+public class UserDAOImpl extends AbstractDAOImpl implements UserDAO {
 
 
     public void add(User user) throws SQLException {
-        Session session = HibernateUtils.getSessionFactory().openSession();
-        session.beginTransaction();
-        session.save(user);
-        session.getTransaction().commit();
-        session.close();
+        super.add(user);
     }
 
     public void update(Long userId, User user) throws SQLException {

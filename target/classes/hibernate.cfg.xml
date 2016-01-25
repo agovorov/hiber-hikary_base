@@ -9,7 +9,7 @@
         <property name="hibernate.connection.provider_class">com.zaxxer.hikari.hibernate.HikariConnectionProvider</property>
         <property name="hibernate.hikari.dataSource.url">jdbc:mysql://localhost:3306/hiber_tut_1</property>
         <property name="hibernate.hikari.dataSource.user">root</property>
-        <property name="hibernate.hikari.dataSource.password"></property>
+        <property name="hibernate.hikari.dataSource.password"/>
         <property name="hibernate.hikari.dataSourceClassName">com.mysql.jdbc.jdbc2.optional.MysqlDataSource</property>
         <property name="hibernate.hikari.maximumPoolSize">30</property>
         <property name="hibernate.hikari.idleTimeout">30000</property>
@@ -30,5 +30,6 @@
         <property name="hibernate.format_sql">true</property>
 
         <mapping class="com.govorov.tut1.entity.User"/>
+        <mapping class="com.govorov.tut1.entity.Car"/>
     </session-factory>
 </hibernate-configuration>

@@ -1,6 +1,5 @@
 package com.govorov.tut1.service;
 
-import com.govorov.tut1.dao.DaoFactory;
 import com.govorov.tut1.dao.UserDAO;
 import com.govorov.tut1.dao.impl.UserDAOImpl;
 import com.govorov.tut1.entity.User;
@@ -16,11 +15,8 @@ public class UserService {
 
     private static final Logger log = LoggerFactory.getLogger(UserService.class);
 
-
     public boolean add(User user) {
-        DaoFactory factory = DaoFactory.getInstance();
-        UserDAO dao = factory.getDao(UserDAO.class);
-//        UserDAO dao = new UserDAOImpl();
+        UserDAO dao = new UserDAOImpl();
         try {
             dao.add(user);
         } catch (SQLException e) {
