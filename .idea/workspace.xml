@@ -1,23 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6ed8a446-b8a4-40a0-a2a6-c3d6711b1d18" name="Default" comment="try to add custom dao fabric">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/govorov/tut1/dao/CarDAO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/govorov/tut1/dao/impl/AbstractDAOImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/govorov/tut1/dao/impl/CarDAOImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/govorov/tut1/entity/Base.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/govorov/tut1/entity/Car.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/govorov/tut1/service/CarService.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/govorov/tut1/dao/DaoFactory.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/govorov/tut1/dao/GenericDao.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/govorov/tut1/dao/impl/JdbcDaoFactory.java" afterPath="" />
+    <list default="true" id="6ed8a446-b8a4-40a0-a2a6-c3d6711b1d18" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/govorov/tut1/Main.class" afterPath="$PROJECT_DIR$/target/classes/com/govorov/tut1/Main.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/govorov/tut1/Main.java" afterPath="$PROJECT_DIR$/src/main/java/com/govorov/tut1/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/govorov/tut1/dao/impl/UserDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/govorov/tut1/dao/impl/UserDAOImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/govorov/tut1/entity/User.java" afterPath="$PROJECT_DIR$/src/main/java/com/govorov/tut1/entity/User.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/govorov/tut1/service/UserService.java" afterPath="$PROJECT_DIR$/src/main/java/com/govorov/tut1/service/UserService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" afterPath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" />
     </list>
     <ignored path="HiberTest.iws" />
@@ -1037,12 +1023,19 @@
       <option name="number" value="Default" />
       <updated>1453707337090</updated>
       <workItem from="1453707376334" duration="10258000" />
-      <workItem from="1453719339699" duration="2238000" />
+      <workItem from="1453719339699" duration="2258000" />
     </task>
+    <task id="LOCAL-00001" summary="step2">
+      <created>1453721595538</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1453721595538</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12496000" />
+    <option name="totallyTimeSpent" value="12516000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1081,8 +1074,10 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <MESSAGE value="try to add custom dao fabric" />
-    <option name="LAST_COMMIT_MESSAGE" value="try to add custom dao fabric" />
+    <MESSAGE value="step2" />
+    <option name="LAST_COMMIT_MESSAGE" value="step2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
