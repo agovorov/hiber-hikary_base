@@ -2,12 +2,12 @@ package com.govorov.tut1;
 
 import com.govorov.tut1.entity.Car;
 import com.govorov.tut1.entity.User;
-import com.govorov.tut1.service.CarService;
 import com.govorov.tut1.service.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.List;
+import java.util.Set;
 
 /**
  * @author Govorov Andrey
@@ -27,10 +27,11 @@ public class Main {
         log.info("User name: {}", user);
 
         // Get list of all vehicles
-        List<Car> cars = user.getCars();
+        Set<Car> cars = user.getCars();
         if (!cars.isEmpty()) {
-            for(Car car : cars) {
-                log.trace("Car: {}", car.toString());
+            log.info("{}", user.getLastname() + " " + user.getLastname());
+            for (Car car : cars) {
+                log.warn("\t{}", car.getVendor() + " " + car.getModel());
             }
         }
 

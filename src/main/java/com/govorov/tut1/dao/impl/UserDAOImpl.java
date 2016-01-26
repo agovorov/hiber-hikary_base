@@ -4,6 +4,8 @@ import com.govorov.tut1.dao.UserDAO;
 import com.govorov.tut1.entity.User;
 import com.govorov.tut1.utils.HibernateUtils;
 import org.hibernate.Session;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.sql.SQLException;
 import java.util.Collection;
@@ -14,6 +16,7 @@ import java.util.List;
  */
 public class UserDAOImpl extends AbstractDAOImpl implements UserDAO {
 
+    private static final Logger log = LoggerFactory.getLogger(UserDAOImpl.class);
 
     public void add(User user) throws SQLException {
         super.add(user);
@@ -26,6 +29,9 @@ public class UserDAOImpl extends AbstractDAOImpl implements UserDAO {
     public User findById(Long userId) throws SQLException {
         Session session = HibernateUtils.getSessionFactory().openSession();
         User user = (User) session.get(User.class, userId);
+
+//        user.getCars();
+//        log.warn("User: {}", user);
         session.close();
         return user;
     }

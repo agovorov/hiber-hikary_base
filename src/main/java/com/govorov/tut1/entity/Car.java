@@ -1,14 +1,13 @@
 package com.govorov.tut1.entity;
 
 import javax.persistence.*;
-import java.math.BigDecimal;
 
 /**
  * @author Govorov Andrey
  */
 @Entity
 @Table(name = "CAR")
-public class Car extends Base{
+public class Car extends Base {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -26,28 +25,18 @@ public class Car extends Base{
     @Column(name = "PRICE", nullable = false)
     private int price;
 
-    public Long getOwner() {
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "owner", insertable = false, updatable = false)
+    private User owner;
+
+    public User getOwner() {
         return owner;
     }
 
-    public void setOwner(Long owner) {
+    public void setOwner(User owner) {
         this.owner = owner;
     }
 
-    @Column(name = "OWNER", nullable = false)
-    private Long owner;
-
-    @Override
-    public String toString() {
-        return "Car{" +
-                "id=" + id +
-                ", model='" + model + '\'' +
-                ", Vendor='" + Vendor + '\'' +
-                ", year=" + year +
-                ", price=" + price +
-                ", owner=" + owner +
-                '}';
-    }
 
     public Long getId() {
         return id;
@@ -87,5 +76,17 @@ public class Car extends Base{
 
     public void setPrice(int price) {
         this.price = price;
+    }
+
+    @Override
+    public String toString() {
+        return "Car{" +
+                "id=" + id +
+                ", model='" + model + '\'' +
+                ", Vendor='" + Vendor + '\'' +
+                ", year=" + year +
+                ", price=" + price +
+                ", owner=" + owner +
+                '}';
     }
 }
